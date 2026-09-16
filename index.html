@@ -245,7 +245,7 @@
   // Lightweight success handler for the Formspree fallback (no-op if using HubSpot embed).
   var f=document.getElementById('ea-form');
   if(f){f.addEventListener('submit',function(e){
-    if(f.action.indexOf('xbgljjoe')>-1){e.preventDefault();alert('Form endpoint not set yet — connect HubSpot or Formspree (see the comment in the code).');return;}
+    if(f.action.indexOf('REPLACE_ME')>-1){e.preventDefault();alert('Form endpoint not set yet — connect HubSpot or Formspree (see the comment in the code).');return;}
     e.preventDefault();
     fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
       .then(function(r){f.style.display='none';document.getElementById('ea-ok').style.display='block';})
