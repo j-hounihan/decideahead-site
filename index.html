@@ -212,7 +212,7 @@
            The form below is a working fallback — set ACTION to a Formspree endpoint
            (formspree.io, free: create a form, paste its URL) OR your HubSpot form.
            ========================================================================= -->
-      <form id="ea-form" action="https://formspree.io/f/REPLACE_ME" method="POST">
+      <form id="ea-form" action="https://formspree.io/f/xbgljjoe" method="POST">
         <label>Name</label>
         <input type="text" name="name" required placeholder="First and last name">
         <label>Department / organization</label>
@@ -245,7 +245,7 @@
   // Lightweight success handler for the Formspree fallback (no-op if using HubSpot embed).
   var f=document.getElementById('ea-form');
   if(f){f.addEventListener('submit',function(e){
-    if(f.action.indexOf('REPLACE_ME')>-1){e.preventDefault();alert('Form endpoint not set yet — connect HubSpot or Formspree (see the comment in the code).');return;}
+    if(f.action.indexOf('xbgljjoe')>-1){e.preventDefault();alert('Form endpoint not set yet — connect HubSpot or Formspree (see the comment in the code).');return;}
     e.preventDefault();
     fetch(f.action,{method:'POST',body:new FormData(f),headers:{'Accept':'application/json'}})
       .then(function(r){f.style.display='none';document.getElementById('ea-ok').style.display='block';})
